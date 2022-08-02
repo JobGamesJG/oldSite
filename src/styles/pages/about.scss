@@ -36,3 +36,12 @@
 	font-size: 40px;
 	line-height: 40px;
 }
+
+@media screen and (max-width: 960px) {
+	.about-me {
+		width: 100%;
+	}
+	.about-img {
+		display: none;
+	}
+}

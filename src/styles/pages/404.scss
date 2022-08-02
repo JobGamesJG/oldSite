@@ -1,0 +1,43 @@
+.error404-wrapper {
+	height: 90vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.error404 {
+	margin: auto;
+
+	display: grid;
+}
+
+.error404-text {
+	font-weight: 600;
+	font-size: 70px;
+	text-align: center;
+
+	&:last-child {
+		font-size: 24px;
+		transform: translateY(-10px);
+	}
+}
+
+.error404-action {
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+	display: block;
+	justify-content: center;
+	align-self: center;
+	text-align: center;
+	background-color: rgba($accent, 1);
+	border-radius: 30px;
+	padding: 15px 20px;
+	font-weight: 600;
+
+	transition: all 0.2s ease;
+
+	&:hover {
+		background-color: rgba($accent, 0.8);
+	}
+}

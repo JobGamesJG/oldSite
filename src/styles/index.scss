@@ -16,11 +16,13 @@ $red: #d83c4a;
 $yellow: #fcfa56;
 
 @import "./components/animeManga.scss";
+@import "./components/scrollTop.scss";
 @import "./components/navbar.scss";
 @import "./components/socials.scss";
 @import "./components/loading.scss";
 @import "./pages/home.scss";
 @import "./pages/about.scss";
+@import "./pages/404.scss";
 
 * {
 	font-family: "Poppins", sans-serif;

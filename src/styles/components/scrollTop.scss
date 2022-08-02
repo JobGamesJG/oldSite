@@ -1,0 +1,24 @@
+.scrollTop {
+	cursor: pointer;
+	right: 32px;
+	bottom: 32px;
+	position: fixed;
+	z-index: 999;
+
+	width: 56px;
+	height: 56px;
+
+	background-color: $accent;
+	border-radius: 100%;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+	transition: all 0.1s ease;
+	transform: translateY(90px);
+
+	&.active {
+		transform: translateY(0px);
+	}
+}
