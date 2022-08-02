@@ -4,6 +4,8 @@ import { AnimeCard } from "../animeCard";
 import { AnimatePresence, motion } from "framer-motion";
 import { PulseLoader } from "react-spinners";
 
+import { Loading } from "../../../other";
+
 export const AnimeListComp: React.FC<{ animes: AnimeList[] | null }> = ({ animes }) => {
 	const [count, setCount] = useState(10000);
 	const onClick = () => setCount(count + 14);
@@ -51,7 +53,7 @@ export const AnimeListComp: React.FC<{ animes: AnimeList[] | null }> = ({ animes
 					}}
 					exit={{ opacity: 0 }}>
 					<div className="louding">
-						<PulseLoader color="#fff" size={40} />
+						<Loading bg={true} />
 					</div>
 				</motion.div>
 			)}

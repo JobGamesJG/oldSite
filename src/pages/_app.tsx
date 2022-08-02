@@ -1,7 +1,6 @@
 import "../styles/index.scss";
 import type { AppProps } from "next/app";
-import Navbar from "../components/main/Navbar";
-import Footer from "../components/main/Footer";
+import { Navbar, Footer, ScrollTop } from "../components/main/";
 import { AnimatePresence, motion } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -24,6 +23,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 					<Component {...pageProps} />
 					<Footer />
 				</motion.div>
+				<ScrollTop />
 			</AnimatePresence>
 		</>
 	);

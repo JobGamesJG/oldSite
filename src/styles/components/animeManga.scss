@@ -1,0 +1,287 @@
+.card-main-title {
+	margin-top: 0.5rem;
+	margin-bottom: 0px;
+	font-size: 50px;
+	font-weight: 500;
+	text-align: left;
+
+	width: 100%;
+}
+
+.card-self-info {
+	margin-bottom: 1rem;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: left;
+}
+
+.card-list {
+	width: 100%;
+	height: 100%;
+
+	justify-content: left;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 200px);
+	grid-gap: 10px;
+
+	margin-top: 10px;
+	margin-bottom: 2rem;
+}
+
+.card {
+	cursor: pointer;
+	width: 200px;
+	height: 300px;
+
+	border-radius: 5px;
+
+	position: relative;
+
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+
+.card-img {
+	user-select: none; /* standard syntax */
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+	-moz-user-select: none; /* mozilla browsers */
+	-khtml-user-select: none; /* webkit (konq	ueror) browsers */
+	-ms-user-select: none; /* IE10+ */
+
+	width: 200px;
+	height: 300px;
+	z-index: 1;
+	margin: auto;
+	border-radius: inherit;
+
+	background-color: $black;
+}
+
+.card-overlap {
+	width: 96%;
+	height: 97%;
+	z-index: 0;
+	margin: auto;
+	position: absolute;
+	border-radius: inherit;
+
+	background-color: $background;
+}
+
+.card-info {
+	transition: all 0.4s ease;
+	background-color: $black;
+	position: absolute;
+	width: 200px;
+	height: 300px;
+	opacity: 0;
+	z-index: 41;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: auto;
+
+	border-radius: inherit;
+	cursor: pointer;
+
+	&.active {
+		background-color: rgba($black, 0.4);
+		opacity: 1;
+	}
+}
+
+.card-title {
+	text-align: center;
+
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.card-popup-wrapper {
+	background-color: rgba($black, 0.7);
+	backdrop-filter: blur(10px);
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0;
+	transition: all 0.2s ease;
+	flex-direction: column;
+	list-style-type: none;
+	grid-gap: 0px;
+	margin-top: 0;
+	z-index: -1;
+
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: space-evenly;
+
+	&.active {
+		z-index: 10000;
+		padding-left: 0px;
+	}
+}
+
+.card-popup {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0;
+	transition: all 0.2s ease;
+	flex-direction: column;
+	list-style-type: none;
+	grid-gap: 0px;
+	margin-top: 0;
+	z-index: -1;
+	font-size: 30px;
+
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.card-popup-inner {
+	border-radius: 10px;
+
+	width: 700px;
+	height: fit-content;
+	display: block;
+	align-items: center;
+
+	padding: 5px 5px 5px 5px;
+
+	//animation: gradient 1s ease infinite;
+	background-size: 400% 400%;
+	-webkit-animation: gradient 5s ease infinite;
+	animation: gradient 5s ease infinite;
+
+	&.watching {
+		background-image: linear-gradient(-45deg, #66a1ff, #3b82f6, #0045b4);
+	}
+
+	&.completed {
+		background-image: linear-gradient(-45deg, #b5ff83, #90e855, #70ff11);
+	}
+
+	&.onhold {
+		background-image: linear-gradient(-45deg, #ffb87a, #fb9d48, #ff861c);
+	}
+
+	&.dropped {
+		background-image: linear-gradient(-45deg, #ff6774, #d83c4a, #ff293a);
+	}
+
+	&.plantowatch {
+		background-image: linear-gradient(-45deg, #fdfcb1, #fcfa56, #fffb00);
+	}
+}
+
+.popup-placement {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 10px;
+	padding: 0px 24px 24px 24px;
+	background-color: rgba($main, 1);
+}
+
+.popup-header {
+	height: 73px;
+	font-size: 24px;
+
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba($border, 0.2);
+
+	p {
+		font-weight: 600;
+		margin-left: 12px;
+	}
+
+	> a {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin-right: 12px;
+
+		i,
+		p {
+			color: rgba($white, 0.6);
+			transition: all 0.2s ease;
+		}
+
+		&:hover {
+			i,
+			p {
+				color: rgba($white, 0.9);
+			}
+		}
+	}
+}
+
+.popup-title {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.popup-info {
+	display: grid;
+	padding: 10px 20px 0px 20px;
+
+	p {
+		width: 100%;
+		font-size: 17px;
+		font-weight: 500;
+	}
+}
+
+.popup-item {
+	display: flex;
+}
+
+.popup-text {
+	color: rgba($white, 0.6);
+	text-align: left;
+}
+
+.louding {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 600px;
+	width: 100%;
+}
+
+@media screen and (max-width: 730px) {
+	.card-popup-inner {
+		width: 80%;
+	}
+
+	.popup-placement {
+		width: 100%;
+	}
+
+	.popup-text {
+		font-size: 17px;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

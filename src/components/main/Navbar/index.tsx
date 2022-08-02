@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NavLink from "./navlink";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
 	const [navOpen, setNavOpen] = useState(false);
 	const [active, setActive] = useState(false);
 
@@ -14,10 +14,9 @@ const Navbar: React.FC = () => {
 						<div className="navbar-links">
 							<NavLink href="/" name="Home" mobile="" onClick={() => setNavOpen(false)} />
 							<NavLink href="/about" name="About" mobile="" onClick={() => setNavOpen(false)} />
-							<div className="navbar-indicator"></div>
 						</div>
 						<div
-							className={active ? "navbar-button active" : "navbar-button"}
+							className={`navbar-button ${active ? "active" : ""}`.trim()}
 							onClick={() => setActive(!active)}>
 							<div className="navbar-button-bar"></div>
 							<div className="navbar-button-bar"></div>
@@ -25,7 +24,7 @@ const Navbar: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className={active ? "navbar-mobile active" : "navbar-mobile"}>
+				<div className={`navbar-mobile ${active ? "active" : ""}`.trim()}>
 					<div className="navbar-mobile-links">
 						<NavLink
 							href="/"
@@ -45,5 +44,3 @@ const Navbar: React.FC = () => {
 		</>
 	);
 };
-
-export default Navbar;

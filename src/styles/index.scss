@@ -4,7 +4,7 @@
 $main: #202020;
 $background: #181818;
 $border: #83796b;
-$accent: #4071f4;
+$accent: #0381fe;
 $text: #fff;
 
 $black: #000;
@@ -15,10 +15,14 @@ $oranje: #fb9d48;
 $red: #d83c4a;
 $yellow: #fcfa56;
 
+@import "./components/animeManga.scss";
+@import "./components/scrollTop.scss";
 @import "./components/navbar.scss";
 @import "./components/socials.scss";
+@import "./components/loading.scss";
 @import "./pages/home.scss";
 @import "./pages/about.scss";
+@import "./pages/404.scss";
 
 * {
 	font-family: "Poppins", sans-serif;

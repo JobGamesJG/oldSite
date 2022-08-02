@@ -36,14 +36,20 @@ const About: NextPage = () => {
 			<div className="about-wrapper">
 				<div className="about">
 					<div className="about-me">
-						<Info />
 						<img
 							alt=""
 							className="about-img"
 							src="https://cdn.jobgamesjg.xyz/files/JG-Picture.png"
 						/>
+						<Info />
 					</div>
-					<div>
+					<div className="animeManga">
+						<h1 className="about-title">Animes</h1>
+						<p className="about-text">
+							I watch a lot of anime and I realy mean A LOT😅. Once I finshed over 50 episodes in
+							one sitting🥱, thats like 16 hours. Now I watch less because of school😢. Every
+							episode I have watched is shown on MyAnimeList and displayed here on my website.
+						</p>
 						<AnimeListComp animes={animes} />
 					</div>
 				</div>
