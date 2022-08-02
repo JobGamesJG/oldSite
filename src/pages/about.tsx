@@ -44,7 +44,7 @@ const About: NextPage = () => {
 						/>
 					</div>
 					<div>
-						<AnimeListComp animes={null} />
+						<AnimeListComp animes={animes} />
 					</div>
 				</div>
 			</div>
