@@ -1,0 +1,57 @@
+.home-wrapper {
+	height: calc(100vh - 60px);
+	width: 100%;
+	display: grid;
+	place-items: center;
+
+	padding: 20px 20px 20px 20px;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+
+	transform: translateY(-15px);
+}
+
+.home-title {
+	display: flex;
+	font-weight: 600;
+	font-size: 50px;
+	text-align: left;
+
+	> h1 {
+		margin-right: 10px;
+		font-weight: inherit;
+		font-size: inherit;
+	}
+
+	> h1:last-child {
+		color: $accent;
+	}
+}
+
+.home-info {
+	font-weight: 400;
+	font-size: 30px;
+	text-align: left;
+	display: flex;
+	transform: translateY(-15px);
+}
+
+@media screen and (max-width: 960px) {
+	.home-title {
+		display: inline-flex;
+		width: max-content;
+
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	.home-info {
+		font-size: 20px;
+		line-height: 30px;
+
+		transform: unset;
+	}
+}

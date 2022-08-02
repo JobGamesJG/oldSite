@@ -1,0 +1,17 @@
+.socials {
+	display: flex;
+	width: 100%;
+
+	font-size: 30px;
+	transform: translateY(-15px);
+
+	a {
+		transition: all 0.2s ease;
+		color: rgba($text, 0.8);
+		margin-right: 15px;
+
+		&:hover {
+			color: rgba($accent, 1);
+		}
+	}
+}
