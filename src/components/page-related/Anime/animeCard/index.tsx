@@ -78,7 +78,9 @@ export const AnimeCard: React.FC<Props> = (props) => {
 								animate={control}
 								variants={variants2_5}
 								initial="disabled"
-								className="card-popup-inner">
+								className={`card-popup-inner ${props.status
+									.replace(" ", "")
+									.replace(" ", "")}`.trim()}>
 								<div className="popup-placement">
 									<div className="popup-header">
 										<a className="popup-title" onClick={() => window.open(props.url)}>
@@ -123,7 +125,7 @@ export const AnimeCard: React.FC<Props> = (props) => {
 											{props.genres.includes("Ecchi") && (
 												<div className="popup-item">
 													<p className="popup-text">description:</p>
-													<p className="popup-prop">No i did not watch this😅</p>
+													<p className="popup-prop">For the plot😌😀</p>
 												</div>
 											)}
 										</AnimatePresence>
@@ -140,9 +142,7 @@ export const AnimeCard: React.FC<Props> = (props) => {
 				variants={variants}
 				initial="initial"
 				animate="animate"
-				className={`card ${props.status.replace(" ", "").replace(" ", "")}${
-					hover ? " active" : ""
-				}`.trim()}
+				className={`card ${hover ? " active" : ""}`.trim()}
 				onClick={
 					active
 						? () => [setHover(false), setModal(false)]

@@ -6,7 +6,7 @@ export const Info: React.FC = () => {
 	return (
 		<>
 			<div className="about-info">
-				<p className="about-title">About Me</p>
+				<h1 className="about-title">About Me</h1>
 				<p className="about-text">
 					Hi, I&apos;m Job, {age} year-old programmer from the Netherlands. The “computer nerd” of
 					the family if you don&apos;t count my brother then😶. I began programming when I was 12

@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 							<div className="navbar-indicator"></div>
 						</div>
 						<div
-							className={active ? "navbar-button active" : "navbar-button"}
+							className={`navbar-button ${active ? "active" : ""}`.trim()}
 							onClick={() => setActive(!active)}>
 							<div className="navbar-button-bar"></div>
 							<div className="navbar-button-bar"></div>
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className={active ? "navbar-mobile active" : "navbar-mobile"}>
+				<div className={`navbar-mobile ${active ? "active" : ""}`.trim()}>
 					<div className="navbar-mobile-links">
 						<NavLink
 							href="/"
