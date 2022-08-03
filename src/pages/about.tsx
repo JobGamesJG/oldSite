@@ -46,9 +46,10 @@ const About: NextPage = () => {
 					<div className="animeManga">
 						<h1 className="about-title">Animes</h1>
 						<p className="about-text">
-							I watch a lot of anime and I realy mean A LOT😅. Once I finshed over 50 episodes in
-							one sitting🥱, thats like 16 hours. Now I watch less because of school😢. Every
-							episode I have watched is shown on MyAnimeList and displayed here on my website.
+							I watch a lot of anime, and with a lot I really mean A LOT. My record is 50+ episodes
+							in 1 day, that is over 16 hours of watching. School does ruin it tho, I am not able to
+							watch a lot anymore because of that. Anyways, you can check what I watched/want to
+							watch here. Additionally you can checkout my MyAnimeList profile as well!
 						</p>
 						<AnimeListComp animes={animes} />
 					</div>
