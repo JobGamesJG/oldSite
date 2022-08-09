@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 
-$main: #202020;
-$background: #181818;
+$bg1: #202020;
+$bg2: #1d1d1d;
+$bg3: #171717;
 $border: #83796b;
 $accent: #0381fe;
 $text: #fff;
@@ -15,10 +16,12 @@ $oranje: #fb9d48;
 $red: #d83c4a;
 $yellow: #fcfa56;
 
+@import "./other.scss";
+
+@import "./components/slider.scss";
 @import "./components/animeManga.scss";
 @import "./components/scrollTop.scss";
 @import "./components/navbar.scss";
-@import "./components/socials.scss";
 @import "./components/loading.scss";
 @import "./pages/home.scss";
 @import "./pages/about.scss";
@@ -37,7 +40,7 @@ $yellow: #fcfa56;
 }
 
 body {
-	background-color: $background;
+	background-color: $bg2;
 	background-attachment: fixed;
 	min-height: 100vh;
 
@@ -57,8 +60,4 @@ a {
 	-moz-user-select: none; /* mozilla browsers */
 	-khtml-user-select: none; /* webkit (konqueror) browsers */
 	-ms-user-select: none; /* IE10+ */
-}
-
-.page-wrapper {
-	padding-top: 60px;
 }

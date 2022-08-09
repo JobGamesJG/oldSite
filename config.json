@@ -1,0 +1,65 @@
+{
+	"pages": {
+		"home": {
+			"prefix": "Hi, I’m",
+			"name": "Job",
+			"description": "year-old anime enjoyer and programmer.",
+			"buttons": [
+				{
+					"icon": "fa-brands fa-github",
+					"path": "https://github.com/JobGamesJG"
+				},
+				{
+					"icon": "fa-brands fa-discord",
+					"path": "https://discord.com/users/679240313952403457"
+				},
+				{
+					"icon": "fa-brands fa-twitter",
+					"path": "https://twitter.com/JobGamesJG"
+				},
+				{
+					"icon": "fa-brands fa-youtube",
+					"path": "https://www.youtube.com/channel/UCB76PdQLx9wg4DCKbsVhyvA"
+				}
+			]
+		},
+		"about": {
+			"about": {
+				"text": "Hi, I'm Job, 14 year-old programmer from the Netherlands. The “computer nerd” of the family if you don't count my brother then😶. I began programming when I was 12 and I haven't stopped ever since. I sleep a lot during the day, but at night😅, I watch a lot of anime or play games. I also like to take pictures or to do sports, the sport i do is hockey and I'm pretty good at it. That's all I wanna say about my live🐒👍🏾. Do you want to see pictures i took📷? click on the pictures below.",
+				"picture": "https://cdn.jobgamesjg.xyz/files/JG-Picture.png"
+			},
+			"slider": [
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/j0E1jYam6L.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/x8EgoV1d2P.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/Ll12ZkoFQP.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/DaqH4kjQLq.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/qy2BZTOQGg.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/5g2upxNMRq.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/UJrMjZQE2m.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/0lKaLP3goo.jpg"
+				},
+				{
+					"image": "https://cdn.jobgamesjg.xyz/files/44SkZAgC7P.jpg"
+				}
+			],
+			"anime": {
+				"text": "I watch a lot of anime and I realy mean A LOT😅. Once I finshed over 50 episodes in one sitting🥱, thats like 16 hours. Now I watch less because of school😢. Every episode I have watched is shown on MyAnimeList and displayed here on my website."
+			}
+		}
+	}
+}

@@ -1,9 +1,10 @@
-import { Info, AnimeListComp } from "../components/page-related/";
+import { AnimeListComp, ImageSlider } from "../components/";
 import { calculateAge, AnimeList } from "../lib";
-import type { NextPage } from "next";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
+import config from "../../config.json";
+import type { NextPage } from "next";
+import Head from "next/head";
 
 const About: NextPage = () => {
 	const [animes, setAnimes] = useState<AnimeList[] | null>(null);
@@ -33,23 +34,25 @@ const About: NextPage = () => {
 				/>
 				<meta property="og:image" content="https://cdn.jobgamesjg.xyz/files/JG-L.png?raw=true" />
 			</Head>
+			<div className="background" />
+			<div className="background-triangle" />
 			<div className="about-wrapper">
-				<div className="about">
+				<div className="about-me-wrapper">
 					<div className="about-me">
-						<img
-							alt=""
-							className="about-img"
-							src="https://cdn.jobgamesjg.xyz/files/JG-Picture.png"
-						/>
-						<Info />
+						<div className="about-info">
+							<h1 className="about-title">About Me</h1>
+							<p className="about-text">{config.pages.about.about.text}</p>
+						</div>
+						<img alt="" className="about-img" src={config.pages.about.about.picture} />
 					</div>
+				</div>
+				<div className="image-slider">
+					<ImageSlider slides={config.pages.about.slider} />
+				</div>
+				<div className="animeManga-wrapper">
 					<div className="animeManga">
 						<h1 className="about-title">Animes</h1>
-						<p className="about-text">
-							I watch a lot of anime and I realy mean A LOT😅. Once I finshed over 50 episodes in
-							one sitting🥱, thats like 16 hours. Now I watch less because of school😢. Every
-							episode I have watched is shown on MyAnimeList and displayed here on my website.
-						</p>
+						<p className="about-text">{config.pages.about.anime.text}</p>
 						<AnimeListComp animes={animes} />
 					</div>
 				</div>

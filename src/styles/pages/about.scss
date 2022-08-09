@@ -2,22 +2,25 @@
 	height: 100vh;
 	width: 100%;
 
+	margin: auto;
 	display: grid;
+	justify-self: center;
 	justify-items: center;
 }
 
-.about {
-	margin-top: 5rem;
+.about-me-wrapper {
 	width: 70%;
+	height: calc(100vh - 60px);
+	margin: auto;
+
+	display: grid;
+	align-items: center;
 }
 
 .about-me {
 	display: flex;
-	align-items: center;
 
-	width: 90%;
-	margin: auto;
-	margin-bottom: 5rem;
+	transform: translateY(-30px);
 }
 
 .about-img {
@@ -27,7 +30,7 @@
 }
 
 .about-info {
-	margin-left: 1rem;
+	margin-right: 5rem;
 	margin-bottom: 1rem;
 }
 
@@ -37,10 +40,24 @@
 	line-height: 40px;
 }
 
+.animeManga-wrapper {
+	padding: 20px;
+}
+
+.animeManga-wrapper {
+	width: 80%;
+}
+
 @media screen and (max-width: 960px) {
 	.about-me {
 		width: 100%;
+		text-align: center;
 	}
+
+	.about-info {
+		margin: unset;
+	}
+
 	.about-img {
 		display: none;
 	}
