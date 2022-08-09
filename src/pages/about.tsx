@@ -41,7 +41,13 @@ const About: NextPage = () => {
 					<div className="about-me">
 						<div className="about-info">
 							<h1 className="about-title">About Me</h1>
-							<p className="about-text">{config.pages.about.about.text}</p>
+							<p className="about-text">
+								{config.pages.about.about.text_1}
+								{age}
+								{config.pages.about.about.text_2}
+								<del>I sleep a lot</del>
+								{config.pages.about.about.text_3}
+							</p>
 						</div>
 						<img alt="" className="about-img" src={config.pages.about.about.picture} />
 					</div>
