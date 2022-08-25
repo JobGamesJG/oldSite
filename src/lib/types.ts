@@ -82,14 +82,14 @@ export interface MangaList {
 	url: string;
 }
 
-export interface DiscordUserRaw {
+export interface MinecraftListRaw {
 	id: string;
 	name: string;
 	properties: [{ name: string; value: string }];
 }
 
-export interface DiscordUser {
+export interface MinecraftList {
 	id: string;
 	name: string;
-	base64Value: string;
+	value: string;
 }

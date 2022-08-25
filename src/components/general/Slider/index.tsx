@@ -1,4 +1,4 @@
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import React, { useState } from "react";
 
 export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
@@ -19,19 +19,11 @@ export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
 	};
 
 	const variants: Variants = {
-		initial: { opacity: 0 },
+		initial: { opacity: 0.7 },
 		disabled: {
 			opacity: 1,
 			transition: {
-				duration: 0.5 + 0.2,
-				ease: [0.6, -0.05, 0.01, 0.99],
-			},
-		},
-		enabled: {
-			opacity: 1,
-			transition: {
-				duration: 0.3,
-				delay: 0.05,
+				duration: 0.7,
 				ease: [0.6, -0.05, 0.01, 0.99],
 			},
 		},
@@ -47,15 +39,26 @@ export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
 				</a>
 				<div>
 					<div className="slider-image-wrapper">
-						<motion.img
-							key={change}
-							variants={variants}
-							initial="initial"
-							animate="disabled"
-							src={slides[current].image}
-							alt=""
-							className="slider-image"
-						/>
+						<AnimatePresence>
+							<motion.img
+								key={slides[current].image}
+								style={{
+									backgroundImage: `url('${slides[current].image}')`,
+								}}
+								variants={variants}
+								initial="initial"
+								animate="disabled"
+								alt=""
+								className="slider-image"
+							/>
+						</AnimatePresence>
+						{slides.map((slide, index) => {
+							return (
+								<div className={`preloud ${index}`.trim()} key={index}>
+									<img src={slide.image} alt="" className="slider-image" />
+								</div>
+							);
+						})}
 					</div>
 					<div className="bullets">
 						{slides.map((slide, index) => {

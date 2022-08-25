@@ -1,5 +1,5 @@
-import { AnimeListComp, ImageSlider } from "../components/";
-import { calculateAge, AnimeList } from "../lib";
+import { AnimeListComp, ImageSlider, GameStatus } from "../components/";
+import { calculateAge, AnimeList, MinecraftList } from "../lib";
 import React, { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import config from "../../config.json";
@@ -8,6 +8,7 @@ import Head from "next/head";
 
 const About: NextPage = () => {
 	const [animes, setAnimes] = useState<AnimeList[] | null>(null);
+	const [minecraft, setMinecraft] = useState<MinecraftList>();
 	const age = calculateAge();
 
 	useEffect(() => {
@@ -16,6 +17,16 @@ const About: NextPage = () => {
 			.get<{ animes: AnimeList[] }>("/api/anime", { cancelToken: token })
 			.then((res) => setAnimes(res.data.animes))
 			.catch((err: AxiosError) => console.error(`[Animes]: ${err.message}`));
+
+		return () => cancel("Request cancelled");
+	}, []);
+
+	useEffect(() => {
+		const { cancel, token } = axios.CancelToken.source();
+		axios
+			.get<{ data: MinecraftList }>("/api/minecraft", { cancelToken: token })
+			.then((res) => setMinecraft(res.data.data))
+			.catch((err: AxiosError) => console.error(`[minecraft]: ${err.message}`));
 
 		return () => cancel("Request cancelled");
 	}, []);
@@ -48,6 +59,8 @@ const About: NextPage = () => {
 						</div>
 						<img alt="" className="about-img" src={config.pages.about.about.picture} />
 					</div>
+					<GameStatus status={minecraft} />
+					{minecraft?.value}
 				</div>
 				<div className="image-slider">
 					<ImageSlider slides={config.pages.about.slider} />
