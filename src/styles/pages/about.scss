@@ -58,13 +58,27 @@
 	.about-me {
 		width: 100%;
 		text-align: center;
+		display: grid;
+	}
+
+	.about-img {
+		margin: auto;
+		margin-top: 20px;
 	}
 
 	.about-info {
 		margin: unset;
 	}
 
-	.about-img {
-		display: none;
+	.about-title {
+		text-align: center;
+	}
+
+	.about-text {
+		text-align: center;
+	}
+
+	.card-list {
+		justify-content: center;
 	}
 }

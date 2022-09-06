@@ -59,8 +59,6 @@ const About: NextPage = () => {
 						</div>
 						<img alt="" className="about-img" src={config.pages.about.about.picture} />
 					</div>
-					<GameStatus status={minecraft} />
-					{minecraft?.value}
 				</div>
 				<div className="image-slider">
 					<ImageSlider slides={config.pages.about.slider} />

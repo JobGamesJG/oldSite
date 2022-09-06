@@ -4,13 +4,14 @@ import React, { useState } from "react";
 export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
 	const [current, setCurrent] = useState(0);
 	const [change, setChange] = useState(0);
+	const length = slides.length;
 
 	const nextSlide = () => {
-		setCurrent(current == slides.length - 1 ? 0 : current + 1);
+		setCurrent(current == length - 1 ? 0 : current + 1);
 	};
 
 	const prevSlide = () => {
-		setCurrent(current == 0 ? slides.length - 1 : current - 1);
+		setCurrent(current == 0 ? length - 1 : current - 1);
 	};
 
 	const jumpSlide = (now: number) => {
@@ -40,7 +41,7 @@ export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
 					<div className="slider-image-wrapper">
 						{slides.map((slide, index) => {
 							return (
-								<div className={`slide ${index == current ? "active" : ""}`.trim()} key={index}>
+								<div className={`preloud ${index}`.trim()} key={index}>
 									<img src={slide.image} alt="" className="slider-image" />
 								</div>
 							);
