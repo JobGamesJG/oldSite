@@ -1,5 +1,5 @@
-import { AnimeListComp, ImageSlider } from "../components/";
-import { calculateAge, AnimeList } from "../lib";
+import { AnimeListComp, ImageSlider, GameStatus } from "../components/";
+import { calculateAge, AnimeList, MinecraftList } from "../lib";
 import React, { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 import config from "../../config.json";
@@ -8,6 +8,7 @@ import Head from "next/head";
 
 const About: NextPage = () => {
 	const [animes, setAnimes] = useState<AnimeList[] | null>(null);
+	const [minecraft, setMinecraft] = useState<MinecraftList>();
 	const age = calculateAge();
 
 	useEffect(() => {
@@ -16,6 +17,16 @@ const About: NextPage = () => {
 			.get<{ animes: AnimeList[] }>("/api/anime", { cancelToken: token })
 			.then((res) => setAnimes(res.data.animes))
 			.catch((err: AxiosError) => console.error(`[Animes]: ${err.message}`));
+
+		return () => cancel("Request cancelled");
+	}, []);
+
+	useEffect(() => {
+		const { cancel, token } = axios.CancelToken.source();
+		axios
+			.get<{ data: MinecraftList }>("/api/minecraft", { cancelToken: token })
+			.then((res) => setMinecraft(res.data.data))
+			.catch((err: AxiosError) => console.error(`[minecraft]: ${err.message}`));
 
 		return () => cancel("Request cancelled");
 	}, []);
@@ -34,7 +45,6 @@ const About: NextPage = () => {
 				/>
 				<meta property="og:image" content="https://cdn.jobgamesjg.xyz/files/JG-L.png?raw=true" />
 			</Head>
-			<div className="background" />
 			<div className="background-triangle" />
 			<div className="about-wrapper">
 				<div className="about-me-wrapper">
@@ -42,9 +52,7 @@ const About: NextPage = () => {
 						<div className="about-info">
 							<h1 className="about-title">About Me</h1>
 							<p className="about-text">
-								{config.pages.about.about.text_1}
-								{age}
-								{config.pages.about.about.text_2}
+								{config.pages.about.about.text_1} {age} {config.pages.about.about.text_2}{" "}
 								<del>I sleep a lot</del>
 								{config.pages.about.about.text_3}
 							</p>

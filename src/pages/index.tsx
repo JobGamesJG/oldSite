@@ -42,7 +42,6 @@ const Home: NextPage = () => {
 				/>
 				<meta property="og:image" content="https://cdn.jobgamesjg.xyz/files/JG-L.png?raw=true" />
 			</Head>
-			<div className="background" />
 			<div className="background-triangle" />
 			<div className="home-wrapper">
 				<div className="home">

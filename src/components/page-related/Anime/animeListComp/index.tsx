@@ -2,7 +2,6 @@ import type { AnimeList } from "../../../../lib";
 import React, { useState } from "react";
 import { AnimeCard } from "../animeCard";
 import { AnimatePresence, motion } from "framer-motion";
-import { PulseLoader } from "react-spinners";
 
 import { Loading } from "../../../other";
 

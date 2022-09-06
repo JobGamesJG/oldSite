@@ -41,24 +41,44 @@
 }
 
 .animeManga-wrapper {
+	width: 100%;
+	height: 100%;
 	padding: 20px;
+
+	background-color: $bg2;
 }
 
-.animeManga-wrapper {
+.animeManga {
 	width: 80%;
+
+	margin: auto;
 }
 
 @media screen and (max-width: 960px) {
 	.about-me {
 		width: 100%;
 		text-align: center;
+		display: grid;
+	}
+
+	.about-img {
+		margin: auto;
+		margin-top: 20px;
 	}
 
 	.about-info {
 		margin: unset;
 	}
 
-	.about-img {
-		display: none;
+	.about-title {
+		text-align: center;
+	}
+
+	.about-text {
+		text-align: center;
+	}
+
+	.card-list {
+		justify-content: center;
 	}
 }

@@ -1,6 +1,7 @@
 import { motion, AnimatePresence, useAnimation, Variants } from "framer-motion";
 import type { AnimeList } from "../../../../lib";
 import React, { useEffect, useState } from "react";
+import Config from "../../../../../config.json";
 
 type Props = AnimeList & { number: number };
 
