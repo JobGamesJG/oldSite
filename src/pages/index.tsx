@@ -5,28 +5,30 @@ import { motion, Variants } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const getVariants = (num: number) => {
-	const variants: Variants = {
-		initial: {
-			transform: "translateY(10px)",
-			opacity: 0,
-		},
-		animate: {
-			transform: "translateY(0px)",
-			opacity: 1,
-			transition: {
-				delay: num * 0.1,
-				duration: 0.3,
-				ease: [0.6, 0, 0.17, 1],
-			},
-		},
-	};
-
-	return variants;
-};
+import { IconButton } from "../components";
 
 const Home: NextPage = () => {
 	const age = calculateAge();
+
+	const getVariants = (num: number) => {
+		const variants: Variants = {
+			initial: {
+				transform: "translateY(10px)",
+				opacity: 0,
+			},
+			animate: {
+				transform: "translateY(0px)",
+				opacity: 1,
+				transition: {
+					delay: num * 0.1,
+					duration: 0.3,
+					ease: [0.6, 0, 0.17, 1],
+				},
+			},
+		};
+
+		return variants;
+	};
 
 	return (
 		<>
@@ -53,10 +55,10 @@ const Home: NextPage = () => {
 							{age} {config.pages.home.description}
 						</p>
 					</div>
-					<div className="home-socials">
-						{config.pages.home.buttons.map((data: { icon: string; path: string }, key: number) => (
-							<motion.div initial="initial" animate="animate" key={key} variants={getVariants(key)}>
-								<a className={data.icon} href={data.path}></a>
+					<div className="home-buttons">
+						{config.pages.home.buttons.map((data, key) => (
+							<motion.div key={key} initial="initial" animate="animate" variants={getVariants(key)}>
+								<IconButton {...data} type="link" style={data.title ? "black" : "string"} />
 							</motion.div>
 						))}
 					</div>

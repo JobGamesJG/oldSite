@@ -1,5 +1,5 @@
 .home-wrapper {
-	height: calc(100vh - 60px);
+	height: 100vh;
 	width: 100%;
 	display: grid;
 	place-items: center;
@@ -9,8 +9,6 @@
 .home {
 	display: flex;
 	flex-direction: column;
-
-	transform: translateY(-15px);
 }
 
 .home-title {
@@ -35,24 +33,31 @@
 	font-size: 30px;
 	text-align: left;
 	display: flex;
-	transform: translateY(-15px);
 }
 
-.home-socials {
+.home-buttons {
 	display: flex;
 	width: 100%;
 
 	font-size: 30px;
-	transform: translateY(-15px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
 
-	a {
-		transition: all 0.2s ease;
-		color: rgba($text, 0.8);
+	a.button.button-black {
+		font-size: 25px;
+	}
+
+	a.button.button-string {
+		font-size: 35px;
+	}
+
+	div {
+		width: fit-content;
+	}
+
+	div:not(:last-child) {
 		margin-right: 15px;
-
-		&:hover {
-			color: rgba($accent, 1);
-		}
 	}
 }
 

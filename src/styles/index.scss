@@ -1,37 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 
-$bg1: #202020;
-$bg2: #1d1d1d;
-$bg3: #171717;
-$border: #83796b;
-$accent: #0381fe;
-$text: #fff;
-
+/* --vars-- */
+$accent: #e31c25;
+$accent-active: #bb000e;
+$white: #eff1f3;
 $black: #000;
-$white: #fff;
-$blue: #4071f4;
-$green: #90e855;
-$oranje: #fb9d48;
-$red: #d83c4a;
-$yellow: #fcfa56;
+$grey: #b8b8b8;
 
-@import "./other.scss";
+$border: #424242;
 
-@import "./components/slider.scss";
-@import "./components/animeManga.scss";
-@import "./components/scrollTop.scss";
-@import "./components/navbar.scss";
-@import "./components/loading.scss";
-@import "./pages/home.scss";
-@import "./pages/about.scss";
-@import "./pages/404.scss";
+$page-background: #111111;
+$page-triangle: #161616;
+$nav-background: #1c1c1c;
+
+$button-black: #1c1d1e;
+$button-black-active: #0e0e0f;
+
+$button-grey: #404142;
+$button-grey-active: #595b5e;
+
+$button-main: #3083ff;
+$button-main-active: #0f51b4;
+
+$button-danger: #e74c3c;
+$button-danger-active: #ef3825;
 
 * {
 	font-family: "Poppins", sans-serif;
 	padding: 0;
 	margin: 0;
-	color: #fff;
+	color: $white;
 	box-sizing: border-box;
 
 	-webkit-box-sizing: border-box;
@@ -40,7 +39,7 @@ $yellow: #fcfa56;
 }
 
 body {
-	background-color: $bg3;
+	background-color: $page-background;
 	background-attachment: fixed;
 	min-height: 100vh;
 
@@ -61,3 +60,17 @@ a {
 	-khtml-user-select: none; /* webkit (konqueror) browsers */
 	-ms-user-select: none; /* IE10+ */
 }
+
+@import "./other.scss";
+
+@import "./components/General/slider.scss";
+@import "./components/General/Button.scss";
+
+@import "./components/Main/scrollTop.scss";
+@import "./components/Main/navbar.scss";
+
+@import "./components/animeManga.scss";
+@import "./components/loading.scss";
+@import "./pages/home.scss";
+@import "./pages/about.scss";
+@import "./pages/404.scss";

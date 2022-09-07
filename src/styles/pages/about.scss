@@ -40,12 +40,20 @@
 	line-height: 40px;
 }
 
+.image-slider {
+	width: 100%;
+	height: 100vh;
+
+	display: grid;
+	background-color: $page-triangle;
+}
+
 .animeManga-wrapper {
 	width: 100%;
 	height: 100%;
 	padding: 20px;
 
-	background-color: $bg2;
+	background-color: $page-background;
 }
 
 .animeManga {

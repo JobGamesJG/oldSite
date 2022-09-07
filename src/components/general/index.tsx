@@ -1,2 +1,3 @@
 export * from "./Slider";
-export * from "./GameStatus";
+export * from "./Button";
+export * from "./IconButton";

@@ -1,3 +1,7 @@
+export type FC<Props extends Record<string, any> = {}> = React.FC<
+	Props & { children?: React.ReactNode }
+>;
+
 export interface AnimeListRaw {
 	status: number;
 	score: string;

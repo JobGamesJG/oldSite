@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, Variants } from "framer-motion";
+import { IconButton } from "../IconButton";
 import React, { useState } from "react";
 
 export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
@@ -36,8 +37,8 @@ export const ImageSlider: React.FC<{ slides: any | null }> = ({ slides }) => {
 				<a className="slider-arrow L" onClick={prevSlide}>
 					<i className="fa-solid fa-chevron-left"></i>
 				</a>
-				<div>
-					<div className="slider-image-wrapper">
+				<div className="slider-image-wrapper">
+					<div className="slider-image">
 						{slides.map((slide, index) => {
 							return (
 								<div className={`slide ${index == current ? "active" : ""}`.trim()} key={index}>

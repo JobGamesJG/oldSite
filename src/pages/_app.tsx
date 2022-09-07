@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 			<AnimatePresence exitBeforeEnter>
 				<>
 					<motion.div
-						className="page-wrapper"
 						key={router.route}
 						initial={{ opacity: 0 }}
 						animate={{

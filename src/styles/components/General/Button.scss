@@ -1,0 +1,111 @@
+.button {
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+
+	font-size: 20px;
+	font-weight: 500;
+
+	transition: all 0.2s ease;
+
+	i {
+		transition: all 0.2s ease;
+	}
+
+	border: none;
+	cursor: pointer;
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.button-main {
+	background-color: $button-main;
+
+	&:hover,
+	&:focus-visible {
+		background-color: $button-main-active;
+	}
+}
+
+.button-nav {
+	color: $white;
+	background-color: transparent;
+
+	padding: 0;
+	border-radius: 0;
+
+	&:hover,
+	&:focus-visible {
+		color: $accent;
+
+		i {
+			color: $accent;
+		}
+	}
+
+	.nav-indicator {
+		background-color: rgba($accent, 1);
+		transition: all 0.5s ease;
+
+		margin: auto;
+
+		width: 0;
+		height: 2px;
+	}
+
+	&.active {
+		.nav-indicator {
+			width: 100%;
+		}
+	}
+}
+
+.button-danger {
+	background-color: $button-danger;
+
+	&:hover,
+	&:focus-visible {
+		background-color: $button-danger-active;
+	}
+}
+
+.button-transparent {
+	background-color: transparent;
+
+	&:hover,
+	&:focus-visible {
+		filter: drop-shadow(0px 0px 10px #ffffff);
+	}
+}
+
+.button-black {
+	background-color: $button-black;
+	padding: 10px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+
+	&:hover,
+	&:focus-visible {
+		background-color: $button-black-active;
+	}
+}
+
+.button-string {
+	color: $white;
+	background-color: transparent;
+
+	padding: 0;
+	border-radius: 0;
+
+	&:hover,
+	&:focus-visible {
+		color: $grey;
+
+		i {
+			color: $grey;
+		}
+	}
+}

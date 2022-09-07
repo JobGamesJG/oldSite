@@ -1,4 +1,4 @@
-import { AnimeListComp, ImageSlider, GameStatus } from "../components/";
+import { AnimeListComp, ImageSlider } from "../components/";
 import { calculateAge, AnimeList, MinecraftList } from "../lib";
 import React, { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
