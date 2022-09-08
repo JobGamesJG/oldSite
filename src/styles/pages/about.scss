@@ -3,6 +3,7 @@
 	width: 100%;
 
 	margin: auto;
+	padding-top: 100px;
 	display: grid;
 	justify-self: center;
 	justify-items: center;
@@ -88,5 +89,12 @@
 
 	.card-list {
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.about-img {
+		width: 200px;
+		height: 200px;
 	}
 }

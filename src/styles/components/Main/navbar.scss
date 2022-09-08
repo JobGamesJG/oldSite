@@ -99,8 +99,12 @@
 }
 
 @media screen and (max-width: 960px) {
+	.navbar-container-wrapper {
+		background-color: $nav-background;
+	}
+
 	.navbar-mobile {
-		display: inline;
+		display: inherit;
 	}
 
 	.navbar-wrapper {
