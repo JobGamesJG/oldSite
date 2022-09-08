@@ -29,8 +29,14 @@ export const Navbar: React.FC = () => {
 			</div>
 			<div className={`navbar-mobile ${active ? "active" : ""}`.trim()}>
 				<div className="navbar-mobile-links">
-					<Button path="/" title="Home" style="nav" type="link" />
-					<Button path="/about" title="About" style="nav" type="link" />
+					<Button path="/" title="Home" style="nav" type="link" onClick={() => setActive(false)} />
+					<Button
+						path="/about"
+						title="About"
+						style="nav"
+						type="link"
+						onClick={() => setActive(false)}
+					/>
 				</div>
 			</div>
 		</div>
