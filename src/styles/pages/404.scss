@@ -1,0 +1,28 @@
+.NotFound-container {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.NotFound-info {
+	text-align: center;
+
+	p {
+		font-weight: 600;
+		font-size: 30px;
+		text-align: center;
+
+		&:last-of-type {
+			font-weight: 500;
+			font-size: 25px;
+		}
+	}
+
+	img {
+		width: 500px;
+		border-radius: 10px;
+	}
+}

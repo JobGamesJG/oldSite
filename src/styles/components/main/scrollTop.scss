@@ -1,0 +1,17 @@
+.scrollTop-container {
+	position: fixed;
+	z-index: 998;
+
+	right: 32px;
+	bottom: 32px;
+
+	align-items: center;
+	justify-content: center;
+
+	button {
+		border-radius: 100% !important;
+		padding: 0 !important;
+		width: 56px;
+		height: 56px;
+	}
+}
