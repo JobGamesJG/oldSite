@@ -1,6 +1,7 @@
 import { motion, AnimatePresence, useAnimation, Variants } from "framer-motion";
 import type { AnimeList } from "../../../../lib";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 type Props = AnimeList & { number: number };
 
@@ -80,18 +81,18 @@ export const AnimeCard: React.FC<Props> = (props) => {
 								variants={variants3}>
 								<div className="modal-inner">
 									<div className="modal-header">
-										<a className="popup-title" onClick={() => window.open(props.url)}>
+										<a className="popup-title" href={props.url}>
 											<i className="fa-solid fa-arrow-up-right-from-square"></i>
 											<p>{props.title}</p>
 										</a>
-										<a>
+										<div>
 											<i
 												className="fas fa-times"
 												onClick={() => [
 													control.start("disabled"),
 													setTimeout(() => setModalOpen(!modalOpen), 200),
 												]}></i>
-										</a>
+										</div>
 									</div>
 									<div className="modal-info">
 										<div className="modal-item">

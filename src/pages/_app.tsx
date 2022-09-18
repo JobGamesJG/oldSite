@@ -19,9 +19,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 							ease: [0.6, -0.05, 0.01, 0.99],
 						},
 					}}
-					exit={{ opacity: 0 }}></motion.div>
-				<Component {...pageProps} />
-				<Footer />
+					exit={{ opacity: 0 }}>
+					<Component {...pageProps} />
+					<Footer />
+				</motion.div>
 			</AnimatePresence>
 			<ScrollTop />
 		</>

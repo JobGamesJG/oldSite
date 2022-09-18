@@ -61,6 +61,23 @@
 			margin-bottom: 0;
 		}
 	}
+
+	.about-anime {
+		justify-content: center;
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+
+		.anime-list {
+			justify-content: center;
+		}
+
+		.modal {
+			width: 80%;
+		}
+	}
 }
 
 @media screen and (max-width: 420px) {

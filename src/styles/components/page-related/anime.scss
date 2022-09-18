@@ -157,9 +157,9 @@
 	font-size: 24px;
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid rgba(66, 66, 66, 0.2);
-
 	align-items: center;
+
+	border-bottom: 1px solid rgba(66, 66, 66, 0.2);
 
 	p {
 		font-weight: 600;
@@ -169,24 +169,35 @@
 		overflow: hidden;
 	}
 
+	> div {
+		margin-left: 12px;
+	}
+
 	> a {
-		cursor: pointer;
 		display: flex;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
 		align-items: center;
-
-		margin-right: 12px;
-
-		i,
-		p {
-			transition: all 0.2s ease;
-			color: rgba($white, 0.6);
-		}
+		justify-content: center;
 
 		&:hover {
 			i,
 			p {
 				color: rgba($white, 0.9);
 			}
+		}
+	}
+
+	i,
+	p {
+		cursor: pointer;
+		transition: all 0.2s ease;
+		color: rgba($white, 0.6);
+
+		&:hover {
+			color: rgba($white, 0.9);
 		}
 	}
 }
