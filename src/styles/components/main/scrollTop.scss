@@ -15,3 +15,9 @@
 		height: 56px;
 	}
 }
+
+@media screen and (max-width: 750px) {
+	.scrollTop-container {
+		display: none;
+	}
+}

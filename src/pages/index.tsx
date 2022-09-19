@@ -46,7 +46,8 @@ const Home: NextPage = () => {
 			<div className="home-container">
 				<div className="home-info">
 					<div className="home-name">
-						<p>{config.pages.home.prefix}</p> <p>{config.pages.home.name}</p>
+						<p>{config.pages.home.prefix}</p>
+						<p>{config.pages.home.name}</p>
 					</div>
 					<div className="home-description">
 						<p>
