@@ -24,6 +24,9 @@ $popup-background: #18191a;
 $button-black: #1c1d1e;
 $button-black-active: #0e0e0f;
 
+$button-slider: #1c1c1c;
+$button-slider-active: #2e2e2e;
+
 $button-grey: #404142;
 $button-grey-active: #595b5e;
 
@@ -77,6 +80,6 @@ a {
 @import "./components/main/footer.scss";
 
 @import "./components/general/button.scss";
+@import "./components/general/slider.scss";
 
 @import "./components/page-related/anime.scss";
-@import "./components/page-related/loading.scss";
