@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IconButton } from "../../general/iconButton";
+import { Button } from "../../";
 
 import { motion, useAnimation, Variants } from "framer-motion";
 
@@ -41,11 +41,11 @@ export const ScrollTop: React.FC = () => {
 			initial="disabled"
 			variants={variants}
 			animate={control}>
-			<IconButton
-				style="main"
+			<Button
 				type="button"
+				style="main"
 				icon="fa-solid fa-arrow-up"
-				onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}></IconButton>
+				onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}></Button>
 		</motion.div>
 	);
 };

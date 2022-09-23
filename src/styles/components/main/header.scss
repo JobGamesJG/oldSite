@@ -110,12 +110,18 @@
 	display: flex;
 	flex-direction: column;
 
-	button {
-		margin: unset !important;
+	button,
+	a {
+		margin: 2px 0 !important;
+	}
+
+	button:last-of-type,
+	a:last-of-type {
+		margin: 0 !important;
 	}
 
 	i {
-		margin-right: 10px;
+		margin-right: 5px;
 	}
 }
 

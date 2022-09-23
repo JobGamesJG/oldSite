@@ -1,4 +1,4 @@
-import { Button, IconButton } from "../../";
+import { Button } from "../../";
 
 import config from "../../../../config.json";
 
@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
 				<div className="footer-socials">
 					{config.pages.home["buttons-prefix"]}{" "}
 					{config.pages.home.buttons.map((data, key) => (
-						<IconButton key={key} {...data} type="link" style={data.title ? "black" : "string"} />
+						<Button key={key} {...data} type="link" style={data.title ? "black" : "string"} />
 					))}
 				</div>
 				<div className="footer-links">
