@@ -4,23 +4,23 @@ import type { FC } from "../../../lib/types";
 
 interface PropsButton {
 	className?: string;
-	title: string;
+	title?: string;
+	icon?: string;
 	style: "main" | "header" | "danger" | "string" | "transparent" | "black";
 	external?: boolean;
 
-	icon?: string;
-	path: string;
 	type: "button";
+	path?: string;
 	onClick: () => void;
 }
 
 interface PropsLink {
 	className?: string;
-	title: string;
+	title?: string;
+	icon?: string;
 	style: "main" | "header" | "danger" | "string" | "transparent" | "black";
 	external?: boolean;
 
-	icon?: string;
 	type: "link";
 	path: string;
 	onClick?: () => void;
@@ -36,18 +36,29 @@ export const Button: FC<Props> = (props) => {
 		asPath === props.path ? "active" : ""
 	}`;
 
-	return type === "button" ? (
+	return icon ? (
+		type === "button" ? (
+			<button className={className} onClick={onClick}>
+				<i className={icon} /> {Boolean(title) && title}
+				{style === "header" ? <div className="header-indicator" /> : <></>}
+			</button>
+		) : (
+			<Link href={props.path}>
+				<a onClick={onClick} className={className}>
+					<i className={icon} /> {Boolean(title) && title}
+					{style === "header" ? <div className="header-indicator" /> : <></>}
+				</a>
+			</Link>
+		)
+	) : type === "button" ? (
 		<button className={className} onClick={onClick}>
 			{external && <i className="fa-solid fa-arrow-up-right-from-square" />} {title}
 		</button>
 	) : style === "header" ? (
 		<Link href={props.path}>
 			<button onClick={onClick} className={className}>
-				<a>
-					<i className={icon}></i>
-					{title}
-				</a>
-				<div className="header-indicator"></div>
+				{title}
+				<div className="header-indicator" />
 			</button>
 		</Link>
 	) : (

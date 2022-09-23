@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { IconButton } from "../components";
+import { Button } from "../components";
 import { motion, Variants } from "framer-motion";
 import config from "../../config.json";
 import { calculateAge } from "../lib/utils";
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
 					<div className="home-buttons">
 						{config.pages.home.buttons.map((data, key) => (
 							<motion.div key={key} initial="initial" animate="animate" variants={getVariants(key)}>
-								<IconButton {...data} type="link" style={data.title ? "black" : "string"} />
+								<Button {...data} type="link" style={data.title ? "black" : "string"} />
 							</motion.div>
 						))}
 					</div>
