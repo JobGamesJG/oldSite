@@ -59,6 +59,23 @@
 	}
 }
 
+.button-slider {
+	transition: all 0.2s ease;
+
+	background-color: rgba($button-slider, 0.4);
+	border: 1px solid rgba($white, 0.1);
+
+	border-radius: 30px;
+	margin: 0;
+
+	z-index: 1000;
+
+	&:hover,
+	&:focus-visible {
+		background-color: rgba($button-slider-active, 0.4);
+	}
+}
+
 .button-danger {
 	background-color: $button-danger;
 

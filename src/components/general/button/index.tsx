@@ -6,7 +6,7 @@ interface PropsButton {
 	className?: string;
 	title?: string;
 	icon?: string;
-	style: "main" | "header" | "danger" | "string" | "transparent" | "black";
+	style: "main" | "header" | "slider" | "danger" | "string" | "transparent" | "black";
 	external?: boolean;
 
 	type: "button";
@@ -18,7 +18,7 @@ interface PropsLink {
 	className?: string;
 	title?: string;
 	icon?: string;
-	style: "main" | "header" | "danger" | "string" | "transparent" | "black";
+	style: "main" | "header" | "slider" | "danger" | "string" | "transparent" | "black";
 	external?: boolean;
 
 	type: "link";

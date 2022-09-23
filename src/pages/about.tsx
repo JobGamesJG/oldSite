@@ -3,7 +3,7 @@ import axios, { AxiosError } from "axios";
 import { NextPage } from "next";
 import Head from "next/head";
 
-import { AnimeListComp } from "../components/";
+import { AnimeListComp, ImageSlider } from "../components/";
 import { calculateAge, AnimeList } from "../lib";
 import config from "../../config.json";
 
@@ -45,6 +45,9 @@ const About: NextPage = () => {
 						</p>
 					</div>
 					<img src={config.pages.about.about.picture} alt="" />
+				</div>
+				<div className="about-slider">
+					<ImageSlider slides={config.pages.about.slider} />
 				</div>
 				<div className="about-anime">
 					<h1>Anime</h1>
