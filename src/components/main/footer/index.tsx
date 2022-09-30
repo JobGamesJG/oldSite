@@ -9,12 +9,12 @@ export const Footer: React.FC = () => {
 				<div className="footer-socials">
 					{config.pages.home["buttons-prefix"]}{" "}
 					{config.pages.home.buttons.map((data, key) => (
-						<Button key={key} {...data} type="link" style={data.title ? "black" : "string"} />
+						<Button key={key} {...data} type="link" style="string" />
 					))}
 				</div>
 				<div className="footer-links">
-					<Button path="/" title="Home" style="string" type="link" />
-					<Button path="/about" title="About" style="string" type="link" />
+					<Button path="/" title="Home" external style="string" type="link" />
+					<Button path="/about" title="About" external style="string" type="link" />
 				</div>
 				<div className="footer-info">
 					<img className="footer-LG" src="https://cdn.jobgamesjg.xyz/files/JG-L.png" alt="" />

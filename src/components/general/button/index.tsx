@@ -52,7 +52,7 @@ export const Button: FC<Props> = (props) => {
 		)
 	) : type === "button" ? (
 		<button className={className} onClick={onClick}>
-			{external && <i className="fa-solid fa-arrow-up-right-from-square" />} {title}
+			{title} {external && <i className="fa-solid fa-arrow-up-right-from-square" />}
 		</button>
 	) : style === "header" ? (
 		<Link href={props.path}>
@@ -64,7 +64,7 @@ export const Button: FC<Props> = (props) => {
 	) : (
 		<Link href={props.path}>
 			<a onClick={onClick} className={className}>
-				{external && <i className="fa-solid fa-arrow-up-right-from-square" />} {title}
+				{title} {external && <i className="fa-solid fa-arrow-up-right-from-square" />}
 			</a>
 		</Link>
 	);

@@ -6,7 +6,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 export const AnimeListComp: React.FC<{ animes: AnimeList[] | null }> = ({ animes }) => {
-	const [count, setCount] = useState(10000);
+	const count = 10000;
 
 	return (
 		<div className="anime-list">
