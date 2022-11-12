@@ -60,9 +60,17 @@
 	display: flex;
 
 	border-top: 1px solid $border;
+
+	p {
+		i {
+			font-style: normal;
+
+			font-weight: 600;
+		}
+	}
 }
 
 .footer-LG {
-	width: 48px;
-	height: 48px;
+	width: 36px;
+	height: 36px;
 }

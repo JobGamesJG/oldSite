@@ -2,9 +2,19 @@
 	width: 100vw;
 	height: 100vh;
 
+	background-image: url("https://cdn.jobgamesjg.xyz/files/j0E1jYam6L.jpg");
+	background-size: cover;
+}
+
+.home-inside {
+	width: 100vw;
+	height: 100vh;
+
 	display: grid;
 	justify-content: center;
 	align-items: center;
+
+	background: linear-gradient(270deg, #0000, #000);
 }
 
 .home-info {
@@ -13,11 +23,13 @@
 
 .home-name {
 	display: flex;
-	font-weight: 600;
-	font-size: 50px;
-	text-align: left;
+	justify-content: center;
 
-	transform: translateY(15px);
+	font-weight: 600;
+	font-size: 70px;
+	text-align: center;
+
+	transform: translateY(10px);
 
 	p:last-of-type {
 		margin-left: 10px;
@@ -28,25 +40,29 @@
 
 .home-description {
 	font-size: 30px;
+	font-weight: 300;
+
 	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 
 .home-buttons {
 	width: 100%;
 	flex-wrap: wrap;
-	justify-content: left;
+	justify-content: center;
 	display: flex;
 
 	i {
-		font-size: 30px;
+		font-size: 20px;
 	}
 
 	div {
-		margin-right: 15px;
+		padding: 15px 8px;
 
 		&:hover {
 			i {
-				color: $accent;
+				transform: scale(1.3);
 			}
 		}
 	}

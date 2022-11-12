@@ -2,11 +2,12 @@
 	margin-top: 10px;
 	margin-bottom: 2rem;
 	display: grid;
-	justify-content: left;
 	grid-template-columns: repeat(auto-fill, 200px);
 	grid-gap: 10px;
-	width: 100%;
-	height: 100%;
+
+	justify-content: left;
+	width: auto;
+	height: auto;
 }
 
 .card {
@@ -235,6 +236,12 @@
 .modal-text {
 	color: rgba($white, 0.6);
 	text-align: left;
+}
+
+@media screen and (max-width: 960px) {
+	.modal {
+		width: 80%;
+	}
 }
 
 @keyframes gradient {
