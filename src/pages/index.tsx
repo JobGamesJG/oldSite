@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import Typewriter from "typewriter-effect";
-
 import { Button } from "../components";
 import { motion, Variants } from "framer-motion";
 import config from "../../config.json";

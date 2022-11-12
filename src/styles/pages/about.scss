@@ -75,6 +75,12 @@
 	}
 }
 
+.about-slider {
+	margin: 20px 0;
+
+	background-color: $page-triangle;
+}
+
 .about-anime {
 	transition: all 0.5s ease;
 
@@ -133,7 +139,6 @@
 		}
 	}
 }
-
 .anime-filter {
 	display: flex;
 	align-items: center;
@@ -178,6 +183,10 @@
 		width: 100%;
 		display: block;
 		border-radius: 20px 20px 0 0;
+	}
+
+	.about-anime {
+		padding-top: 30px;
 	}
 }
 
