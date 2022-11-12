@@ -1,7 +1,7 @@
 {
 	"pages": {
 		"home": {
-			"prefix": "Hi, I’m",
+			"prefix": "I’m",
 			"name": "Job",
 			"description": "year-old anime enjoyer and programmer.",
 			"buttons-prefix": "Follow me on",
@@ -32,6 +32,26 @@
 				"text_3": "😅, watch a lot of anime or play video games. I also do sports, Hockey. I’m pretty good at it😀. That’s all I wanna say about my live. There are not many things I want to say about my life🐒👍🏾.",
 				"picture": "https://cdn.jobgamesjg.xyz/files/JG-Picture.png"
 			},
+			"cards": [
+				{
+					"title": "More About me",
+					"image": "https://cdn.jobgamesjg.xyz/files/JG-Picture.png",
+					"details": "All the things you need to know about me!",
+					"onclick": "me"
+				},
+				{
+					"title": "Photo`s",
+					"image": "https://cdn.jobgamesjg.xyz/files/DaqH4kjQLq.jpg",
+					"details": "A few pictures I took during my vacation.",
+					"onclick": "photo"
+				},
+				{
+					"title": "Anime List",
+					"image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/MyAnimeList_Logo.png",
+					"details": "All the animes I`ve seen are on my website!",
+					"onclick": "anime"
+				}
+			],
 			"slider": [
 				{
 					"image": "https://cdn.jobgamesjg.xyz/files/j0E1jYam6L.jpg"
@@ -63,9 +83,6 @@
 			],
 			"anime": {
 				"text": "I watch a lot of anime, and with a lot I really mean A LOT. My record is 50+ episodes in 1 day, that is over 16 hours of watching. School does ruin it tho, I am not able to watch a lot anymore because of that. Anyways, you can check what I watched/want to watch here. Additionally you can checkout my MyAnimeList profile as well!"
-			},
-			"test": {
-				"title": "Test Modal"
 			}
 		}
 	}

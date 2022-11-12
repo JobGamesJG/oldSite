@@ -7,3 +7,4 @@ export * from "./general/imageSlider";
 
 export * from "./page-related/anime/animeListComp";
 export * from "./page-related/anime/animeCard";
+export * from "./page-related/card";

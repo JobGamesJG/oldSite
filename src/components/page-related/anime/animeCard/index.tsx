@@ -65,62 +65,59 @@ export const AnimeCard: React.FC<Props> = (props) => {
 	};
 
 	return (
-		<div className="card-container">
-			<AnimatePresence exitBeforeEnter>
-				{modalOpen && (
-					<motion.div
-						className={`modal-container ${modalOpen ? "active" : ""}`.trim()}
-						animate={control}
-						variants={variants2}
-						initial="disabled">
-						<div className="modal-outer">
-							<motion.div
-								className={`modal ${props.status.replaceAll(" ", "")}`.trim()}
-								animate={control}
-								initial="disabled"
-								variants={variants3}>
-								<div className="modal-inner">
-									<div className="modal-header">
-										<a className="popup-title" href={props.url}>
-											<i className="fa-solid fa-arrow-up-right-from-square"></i>
-											<p>{props.title}</p>
-										</a>
-										<div>
-											<i
-												className="fas fa-times"
-												onClick={() => [
-													control.start("disabled"),
-													setTimeout(() => setModalOpen(!modalOpen), 200),
-												]}></i>
-										</div>
-									</div>
-									<div className="modal-info">
-										<div className="modal-item">
-											<p className="modal-text">status:</p>
-											<p className="modal-prop">
-												<i className={props.icon}></i> {props.status}
-											</p>
-										</div>
-										<div className="modal-item">
-											<p className="modal-text">eps:</p>
-											<p className="modal-prop">
-												<i className="fa-solid fa-ticket"></i> {props.eps_watchted} /{" "}
-												{props.eps_num}
-											</p>
-										</div>
-										<div className="modal-item">
-											<p className="modal-text">rating:</p>
-											<p className="modal-prop">
-												<i className="fa-solid fa-star"></i> {props.rating} / 10
-											</p>
-										</div>
+		<div className={`card-container ${props.status.replaceAll(" ", "")}`.trim()}>
+			{modalOpen && (
+				<motion.div
+					className={`modal-container ${modalOpen ? "active" : ""}`.trim()}
+					animate={control}
+					variants={variants2}
+					initial="disabled">
+					<div className="modal-outer">
+						<motion.div
+							className={`modal ${props.status.replaceAll(" ", "")}`.trim()}
+							animate={control}
+							initial="disabled"
+							variants={variants3}>
+							<div className="modal-inner">
+								<div className="modal-header">
+									<a className="popup-title" href={props.url}>
+										<i className="fa-solid fa-arrow-up-right-from-square"></i>
+										<p>{props.title}</p>
+									</a>
+									<div>
+										<i
+											className="fas fa-times"
+											onClick={() => [
+												control.start("disabled"),
+												setTimeout(() => setModalOpen(!modalOpen), 200),
+											]}></i>
 									</div>
 								</div>
-							</motion.div>
-						</div>
-					</motion.div>
-				)}
-			</AnimatePresence>
+								<div className="modal-info">
+									<div className="modal-item">
+										<p className="modal-text">status:</p>
+										<p className="modal-prop">
+											<i className={props.icon}></i> {props.status}
+										</p>
+									</div>
+									<div className="modal-item">
+										<p className="modal-text">eps:</p>
+										<p className="modal-prop">
+											<i className="fa-solid fa-ticket"></i> {props.eps_watchted} / {props.eps_num}
+										</p>
+									</div>
+									<div className="modal-item">
+										<p className="modal-text">rating:</p>
+										<p className="modal-prop">
+											<i className="fa-solid fa-star"></i> {props.rating} / 10
+										</p>
+									</div>
+								</div>
+							</div>
+						</motion.div>
+					</div>
+				</motion.div>
+			)}
 			<motion.div
 				onHoverStart={modalOpen ? () => setHover(false) : () => setHover(true)} //{() => setHover(true)}
 				onHoverEnd={() => setHover(false)}

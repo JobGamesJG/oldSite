@@ -18,7 +18,9 @@ export const Footer: React.FC = () => {
 				</div>
 				<div className="footer-info">
 					<img className="footer-LG" src="https://cdn.jobgamesjg.xyz/files/JG-L.png" alt="" />
-					<p>made by JobGamesJG</p>
+					<p>
+						made by <i>JobGamesJG</i>
+					</p>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import Typewriter from "typewriter-effect";
+
 import { Button } from "../components";
 import { motion, Variants } from "framer-motion";
 import config from "../../config.json";
@@ -44,22 +46,32 @@ const Home: NextPage = () => {
 				<meta property="og:image" content="https://cdn.jobgamesjg.xyz/files/JG-L.png?raw=true" />
 			</Head>
 			<div className="home-container">
-				<div className="home-info">
-					<div className="home-name">
-						<p>{config.pages.home.prefix}</p>
-						<p>{config.pages.home.name}</p>
-					</div>
-					<div className="home-description">
-						<p>
-							{age} {config.pages.home.description}
-						</p>
-					</div>
-					<div className="home-buttons">
-						{config.pages.home.buttons.map((data, key) => (
-							<motion.div key={key} initial="initial" animate="animate" variants={getVariants(key)}>
-								<Button {...data} type="link" style={data.title ? "black" : "string"} />
-							</motion.div>
-						))}
+				<div className="home-inside">
+					<div className="home-info">
+						<div className="home-name">
+							<p>{config.pages.home.prefix}</p>
+							<p>{config.pages.home.name}</p>
+						</div>
+						<div className="home-description">
+							<Typewriter
+								options={{
+									strings: [`${age} years old`, "Web developer", "Anime enjoyer"],
+									autoStart: true,
+									loop: true,
+								}}
+							/>
+						</div>
+						<div className="home-buttons">
+							{config.pages.home.buttons.map((data, key) => (
+								<motion.div
+									key={key}
+									initial="initial"
+									animate="animate"
+									variants={getVariants(key)}>
+									<Button {...data} type="link" style={data.title ? "black" : "string"} />
+								</motion.div>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
