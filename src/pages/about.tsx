@@ -66,7 +66,11 @@ const About: NextPage = () => {
 				/>
 				<meta property="og:image" content="https://cdn.jobgamesjg.xyz/files/JG-L.png" />
 			</Head>
-			<motion.div className="about-close" initial="disabled" variants={variants} animate={control}>
+			<motion.div
+				className={`about-close ${current}`}
+				initial="disabled"
+				variants={variants}
+				animate={control}>
 				<Button
 					style="main"
 					type="button"

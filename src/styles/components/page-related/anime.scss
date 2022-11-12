@@ -238,6 +238,12 @@
 	text-align: left;
 }
 
+@media screen and (max-width: 960px) {
+	.modal {
+		width: 80%;
+	}
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;

@@ -78,9 +78,9 @@
 .about-anime {
 	transition: all 0.5s ease;
 
-	width: 80%;
+	width: 90%;
 	min-height: 100vh;
-	margin: 70px auto;
+	margin: 120px auto 0 auto;
 
 	> h1 {
 		font-weight: 600;
@@ -93,11 +93,25 @@
 		margin-bottom: 1rem;
 	}
 
+	&.all {
+		.anime-filter {
+			> p:nth-child(1) {
+				font-weight: 700;
+			}
+		}
+	}
+
 	&.watching {
 		.card-container:not(.watching) {
 			opacity: 0;
 			visibility: hidden;
 			display: none;
+		}
+
+		.anime-filter {
+			> p:nth-child(2) {
+				font-weight: 700;
+			}
 		}
 	}
 
@@ -107,6 +121,12 @@
 			visibility: hidden;
 			display: none;
 		}
+
+		.anime-filter {
+			> p:nth-child(3) {
+				font-weight: 700;
+			}
+		}
 	}
 
 	&.onhold {
@@ -114,6 +134,12 @@
 			opacity: 0;
 			visibility: hidden;
 			display: none;
+		}
+
+		.anime-filter {
+			> p:nth-child(4) {
+				font-weight: 700;
+			}
 		}
 	}
 
@@ -123,6 +149,11 @@
 			visibility: hidden;
 			display: none;
 		}
+		.anime-filter {
+			> p:nth-child(5) {
+				font-weight: 700;
+			}
+		}
 	}
 
 	&.plantowatch {
@@ -130,6 +161,11 @@
 			opacity: 0;
 			visibility: hidden;
 			display: none;
+		}
+		.anime-filter {
+			> p:nth-child(6) {
+				font-weight: 700;
+			}
 		}
 	}
 }
@@ -206,6 +242,176 @@
 		color: #a0a0a0;
 		font-size: 15px;
 		font-weight: 400;
+	}
+}
+
+//in the cards
+
+@media screen and (max-width: 960px) {
+	.about-anime {
+		h1 {
+			text-align: center;
+			justify-content: center;
+		}
+
+		p {
+			text-align: center;
+			justify-content: center;
+
+			margin: 0;
+		}
+	}
+
+	.anime-filter {
+		padding: 0;
+
+		display: grid;
+
+		text-align: center;
+		justify-content: center;
+	}
+
+	.anime-list {
+		justify-content: center !important;
+	}
+
+	.about-close.me {
+		height: 100%;
+		width: 100%;
+		margin: -50px -25px;
+		align-items: flex-end;
+	}
+
+	.about-me {
+		width: 100%;
+		text-align: center;
+		display: grid;
+	}
+
+	.about-img {
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	.about-info {
+		margin: unset;
+		padding: 20px;
+
+		p {
+			margin: unset;
+		}
+	}
+
+	.about-title {
+		text-align: center;
+	}
+
+	.about-text {
+		text-align: center;
+	}
+
+	.card-list {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.about-img {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+//cards
+
+@media screen and (max-width: 1070px) {
+	.choose-item {
+		width: 250px;
+	}
+
+	.choose-item:nth-child(2) {
+		.img-container {
+			height: min-content;
+		}
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.choose-item {
+		width: 200px;
+		height: 325px;
+	}
+
+	.img-container {
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.choose-item {
+		transition: all 0.2s ease;
+		background-color: $foot-background;
+		border-radius: 20px;
+
+		display: flex;
+
+		width: 400px;
+		height: 200px;
+
+		margin: 10px;
+	}
+
+	.img-container {
+		clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+
+		width: 200px;
+		height: 200px !important;
+
+		img {
+			height: 100%;
+			width: auto;
+			display: block;
+			border-radius: 20px 0 0 20px;
+		}
+	}
+
+	.choose-container {
+		display: grid;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.choose-item {
+		transition: all 0.2s ease;
+		background-color: $foot-background;
+		border-radius: 20px;
+
+		display: flex;
+
+		width: 300px;
+		height: 150px;
+
+		margin: 10px;
+	}
+
+	.img-container {
+		clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+
+		width: 150px;
+		height: 150px !important;
+
+		img {
+			height: 100%;
+			width: auto;
+			display: block;
+			border-radius: 20px 0 0 20px;
+		}
+	}
+
+	.choose-container {
+		display: grid;
+		padding: 20px;
 	}
 }
 
